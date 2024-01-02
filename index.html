@@ -7,6 +7,7 @@
     <title>Web to Lead Form</title>
     <link rel="stylesheet" href= "style.css"/>
     <script src="scriptwtl.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 </head>
 <body>
@@ -17,6 +18,12 @@
         onsubmit="beforesubmit()"
         >
     
+    <input 
+    type=hidden 
+    name='captcha_settings' 
+    value='{"keyname":"Web2Lead","fallback":"true","orgId":"00D7Q000004Rdem","ts":""}'
+    />
+
     <input 
         type="hidden"
         name="oid" 
@@ -72,6 +79,11 @@
     
     <input type="submit" name="submit" class="submit"/>
     
+    <div 
+    class="g-recaptcha" 
+    data-sitekey="6Ld-fkMpAAAAAFDMTaRh67ocAPQULTvF8R3q6aTb"
+    ></div>
+    <br/>
     </form>
     
 </body>
