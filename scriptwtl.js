@@ -6,7 +6,7 @@ function beforesubmit(event){
     let inputdate = document.querySelector(".inputdate");
     
     console.log("inputdate",inputdate);//string --> date(es_ES)
-    let formattedDate = new Date(inputdate.value).toLocaleDateString("es_ES");
+    let formattedDate = new Date(inputdate.value);
     outputdate.value = formattedDate;
 }else{
     alert("Please check the recaptcha box to submit the lead");
